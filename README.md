@@ -1,7 +1,7 @@
 # Day 1 - Golang Backend 🚀  
-## Nested JSON: Order, Customer, and Items
+## Nested JSON: Order, Customer, and Items (Marshal & Unmarshal)
 
-Today I learned how to create nested JSON structures in Golang using struct and slice.
+Today I learned how to create nested JSON structures in Golang using struct and slice, and also how to **marshal** and **unmarshal** JSON.
 
 ---
 
@@ -10,13 +10,12 @@ Today I learned how to create nested JSON structures in Golang using struct and 
 Create a struct `Order` that contains:
 - A nested struct `Customer`
 - A slice (list) of `Item`
-- Convert the struct into JSON format
+- Convert the struct into JSON (marshal)
+- Read JSON back into struct (unmarshal)
 
 ---
 
 ## 🏗️ Data Structure Design
-
-The structure looks like this:
 
 Order
 - ID
@@ -29,3 +28,4 @@ Order
   - Quantity
 
 ---
+Ni Putu Bintang Permatasari — Computer Science Student
