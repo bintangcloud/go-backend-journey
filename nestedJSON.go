@@ -6,8 +6,9 @@ import (
 )
 
 type Customer struct {
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	Name       string `json:"name"`
+	Email      string `json:"email"`
+	SecretCode string `json:"-"`
 }
 
 type Items struct {
@@ -23,11 +24,13 @@ type Order struct {
 }
 
 func main() {
+	//Marshal
 	p1 := Order{
 		ID: 101,
 		Customer: Customer{
-			Name:  "Bintang",
-			Email: "bintang@gmail.com",
+			Name:       "Bintang",
+			Email:      "bintang@gmail.com",
+			SecretCode: "AKUCANTIK",
 		},
 		Items: []Items{
 			{ProductName: "Novel", Price: 200000, Quantity: 1},
@@ -37,4 +40,23 @@ func main() {
 
 	jsonData, _ := json.Marshal(p1)
 	fmt.Println("Hasil JSON:", string(jsonData))
+
+	//Unmarshal
+	jsonInput := `{
+		"id":102,
+		"customer":{
+			"name":"Kirana",
+			"email":"kirana@gmail.com"
+		},
+		"items":[
+			{"product_name":"Melon Tea", "price":10000,"quantity":1},
+			{"product_name":"Lemon Tea", "price":10000,"quantity":1}
+		]
+	}`
+	var p2 Order
+	err := json.Unmarshal([]byte(jsonInput), &p2)
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
+	fmt.Printf("Hasil Struct:%+v\n", p2)
 }
