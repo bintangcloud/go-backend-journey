@@ -1,22 +1,21 @@
-# Day 1 - Golang Backend 🚀  
-## Nested JSON: Order, Customer, and Items
+# Golang Backend Learning Journey 🚀
 
-Today I learned how to create nested JSON structures in Golang using struct and slice.
+This repository documents my backend development journey using Go.
 
 ---
 
-## 📌 Problem
+# 📅 Day 1 - Nested JSON (Marshal & Unmarshal)
 
-Create a struct `Order` that contains:
-- A nested struct `Customer`
-- A slice (list) of `Item`
-- Convert the struct into JSON format
+## 🎯 Objective
+Create a struct `Order` that:
+- Contains nested struct `Customer`
+- Contains slice (list) of `Item`
+- Convert struct to JSON (Marshal)
+- Convert JSON back to struct (Unmarshal)
 
 ---
 
 ## 🏗️ Data Structure Design
-
-The structure looks like this:
 
 Order
 - ID
@@ -29,3 +28,42 @@ Order
   - Quantity
 
 ---
+
+# 📅 Day 2 - REST API using Gin Framework
+
+## 🎯 Objective
+Build a simple REST API server that:
+- Creates HTTP server using Gin
+- Handles GET and POST routes
+- Accepts JSON request
+- Automatically binds JSON to struct
+- Returns JSON response
+
+---
+
+# 🧠 What I Learned
+
+- Struct & nested struct in Go
+- Slice in struct
+- JSON marshal & unmarshal
+- Basic REST API development
+- Routing in Gin
+- JSON binding (`ShouldBindJSON`)
+- Basic validation logic
+
+---
+
+# 🚀 Next Goals
+
+- Integrate nested struct into API
+- Add CRUD operations
+- Connect to database
+- Implement authentication (JWT)
+
+---
+
+✨ Learning backend step by step and building consistency.
+
+---
+
+**Ni Putu Bintang Permatasari — Computer Science Student**
