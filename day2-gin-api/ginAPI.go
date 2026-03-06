@@ -46,17 +46,17 @@ func main() {
 		})
 	})
 
-	r.GET("/menu-hari-ini", func (c*gin.Context) {
-		c.JSON(200,gin.H{
-			"status":"Toko Buka",
-			"pesan":"Silakan pilih menu dibawah ya kak",
-			"daftar_menu":[]string{
+	r.GET("/menu-hari-ini", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"status": "Toko Buka",
+			"pesan":  "Silakan pilih menu dibawah ya kak",
+			"daftar_menu": []string{
 				"Melon Tea - Rp.10.000",
 				"Lemon Tea - Rp.10.000",
 				"Kopi Susu - Rp.15.000",
-			}
+			},
 		})
-		
+
 	})
 
 	r.Run(":8080")
